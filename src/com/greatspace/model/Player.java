@@ -23,7 +23,7 @@ public class Player extends GameObject {
     private Controller controle;
     private List<Bullet> bullets;
 
-    public Player(IImage image) { //DEPENDENCY INJECTION! SCREENSHOT
+    public Player(IImage image) { 
         if (imagemProxy == null)
             imagemProxy = image;
 
