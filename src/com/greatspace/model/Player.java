@@ -1,6 +1,7 @@
 package com.greatspace.model;
 
 import com.greatspace.controller.Controller;
+import com.greatspace.interfaces.IImage;
 import com.greatspace.proxy.ProxyImage;
 
 import java.awt.Rectangle;
@@ -16,16 +17,15 @@ public class Player extends GameObject {
     private int x, y;
     private int dx, dy;
     private boolean morto;
-    private static ProxyImage imagemProxy;
+    private static IImage imagemProxy;
     private Bullet missel;
 
     private Controller controle;
-
     private List<Bullet> bullets;
 
-    public Player() {
+    public Player(IImage image) { //DEPENDENCY INJECTION! SCREENSHOT
         if (imagemProxy == null)
-            imagemProxy = new ProxyImage("/com/greatspace/sprites/ship.gif");
+            imagemProxy = image;
 
         this.setImage(imagemProxy.loadImage().getImage());
 

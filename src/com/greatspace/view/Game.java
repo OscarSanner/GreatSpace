@@ -48,7 +48,7 @@ public class Game extends JPanel implements ActionListener {
     public Game()
     {
 
-        this.nave = new Player();
+        this.nave = new Player(new ProxyImage("/com/greatspace/sprites/ship.gif"));
 
         setFocusable(true);
         setDoubleBuffered(true);
@@ -433,13 +433,11 @@ public class Game extends JPanel implements ActionListener {
         }
 
         @Override
-        public void keyReleased(KeyEvent e)
-        {
+        public void keyReleased(KeyEvent e) {
             playeOne.getControle().keyReleased(playeOne, e);
             if (p2) {
                 playerTwo.getControle().keyReleased(playerTwo, e);
             }
         }
-
     }
 }

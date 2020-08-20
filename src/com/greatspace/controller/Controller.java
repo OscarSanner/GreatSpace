@@ -12,7 +12,7 @@ import static com.greatspace.controller.Touch.*;
  * @author Dayvson
  */
 public enum Controller implements IStrategy {
-
+// Finns endast en konkret implementation av IStrategy, Controller. Dessutom är klassen som använder Controller beroende av den konkreta implementationen
     PLAYER_1 {
         @Override
         public void keyPressed(Player player, KeyEvent key)
@@ -88,7 +88,6 @@ public enum Controller implements IStrategy {
                 }
             }
         }
-
         @Override
         public void keyReleased(Player player, KeyEvent key)
         {
